@@ -1,3 +1,5 @@
+Not completed yet!
+
 # Minesweeper
 
 Add the numbers to a minesweeper board.
