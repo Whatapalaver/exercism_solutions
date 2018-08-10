@@ -5,7 +5,7 @@ describe('ProteinTranslation', function () {
     expect(translate()).toEqual([]);
   });
 
-  xit('Methionine codon translates into protein', function () {
+  it('Methionine codon translates into protein', function () {
     expect(translate('AUG')).toEqual(['Methionine']);
   });
 
