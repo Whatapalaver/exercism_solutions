@@ -20,6 +20,8 @@ JavaScript
 -------
 Core:
 - [x] Leap
+- [x] RNA Transcription
+- [ ] Simple Cipher
 
 Additional:
 - [ ] Protein Translation
