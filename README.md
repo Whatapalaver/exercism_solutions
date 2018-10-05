@@ -27,10 +27,11 @@ Additional:
 - [ ] Protein Translation
 - [ ] Minesweeper
 
-Python
+Java
 -----
 Core:
-
+- [x] TwoFer
+- [ ] Hamming
 
 Additional:
 
