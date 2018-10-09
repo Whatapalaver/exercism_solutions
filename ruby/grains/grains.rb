@@ -7,14 +7,7 @@ class Grains
 
   def self.chessboard
     chessboard = []
-    (1..64).each do |square|
-      chessboard <<
-        if square == 1
-          1
-        else
-          chessboard[square - 2] * 2
-        end
-    end
+    (0..63).map { |index| chessboard << 2.pow(index) }
     chessboard
   end
 
