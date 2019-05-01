@@ -27,11 +27,14 @@ Core:
 - [x] TwoFer
 - [x] Hamming
 - [x] Raindrops
-- [ ] Acronym
+- [x] Acronym
 
 Additional:
-- [x] Leap
-- [x] Grains
+- [x] Leap [Easy]
+- [x] Grains [Medium]
+- [x] Gigasecond [Easy]
+- [x] Sieve [Easy]
+- [ ] rna-transcription [Easy]
 
 JavaScript
 -------
