@@ -34,7 +34,9 @@ Additional:
 - [x] Grains [Medium]
 - [x] Gigasecond [Easy]
 - [x] Sieve [Easy]
-- [ ] rna-transcription [Easy]
+- [x] rna-transcription [Easy]
+- [ ] pangram [Easy]
+- [ ] bob [Easy]
 
 JavaScript
 -------
