@@ -28,6 +28,8 @@ Core:
 - [x] Hamming
 - [x] Raindrops
 - [x] Acronym
+- [x] High-Scores
+- [x] Matrix
 
 Additional:
 - [x] Leap [Easy]
@@ -36,7 +38,8 @@ Additional:
 - [x] Sieve [Easy]
 - [x] rna-transcription [Easy]
 - [ ] pangram [Easy]
-- [ ] bob [Easy]
+- [x] bob [Easy]
+- [x] triangle [Easy]
 
 JavaScript
 -------
