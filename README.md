@@ -37,9 +37,10 @@ Additional:
 - [x] Gigasecond [Easy]
 - [x] Sieve [Easy]
 - [x] rna-transcription [Easy]
-- [ ] pangram [Easy]
+- [x] pangram [Easy]
 - [x] bob [Easy]
 - [x] triangle [Easy]
+- [ ] strain [Easy]
 
 JavaScript
 -------

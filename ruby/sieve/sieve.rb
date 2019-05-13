@@ -7,6 +7,6 @@ class Sieve
 
   def primes
     range = (2..max_num).to_a
-    range.each { |n| n.upto(@max_num) { |x| range.delete(x * n) } }
+    range.each { |n| n.upto(max_num) { |x| range.delete(x * n) } }
   end
 end
