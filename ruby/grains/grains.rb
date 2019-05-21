@@ -4,26 +4,26 @@ class Grains
   MULTIPLIER = 2
 
   class << self
-    def square(square)
-      unless valid_square(square)
+    def square(number)
+      unless valid_position(number)
         raise ArgumentError, "Must be between #{MIN} and #{MAX}"
       end
 
-      square_total(square)
+      position_total(number)
     end
 
     def total
-      (MIN..MAX).inject(0) { |res, sq| res + square_total(sq) }
+      (MIN..MAX).inject(0) { |result, number| result + position_total(number) }
     end
 
     private
 
-    def valid_square(num)
-      num.between?(MIN, MAX)
+    def valid_position(number)
+      number.between?(MIN, MAX)
     end
 
-    def square_total(square)
-      MULTIPLIER.pow(square - 1)
+    def position_total(number)
+      MULTIPLIER.pow(number - 1)
     end
   end
 end
