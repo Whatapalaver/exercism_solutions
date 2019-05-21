@@ -1,25 +1,29 @@
 class Grains
-  MAX_SQUARES = 64
-  MIN_SQUARES = 1
+  MAX = 64
+  MIN = 1
+  MULTIPLIER = 2
+
   class << self
     def square(square)
-      raise ArgumentError, 'Must be between 1 and 64' unless valid_square(square)
+      unless valid_square(square)
+        raise ArgumentError, "Must be between #{MIN} and #{MAX}"
+      end
 
-      doubling_grains(square).last
+      square_total(square)
     end
 
     def total
-      doubling_grains(MAX_SQUARES).sum
+      (MIN..MAX).inject(0) { |res, sq| res + square_total(sq) }
     end
 
     private
 
     def valid_square(num)
-      num >= MIN_SQUARES && num <= MAX_SQUARES
+      num.between?(MIN, MAX)
     end
 
-    def doubling_grains(total_squares)
-      (0..total_squares - 1).map { |index| 2.pow(index) }
+    def square_total(square)
+      MULTIPLIER.pow(square - 1)
     end
   end
 end
