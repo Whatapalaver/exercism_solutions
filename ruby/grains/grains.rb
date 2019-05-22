@@ -1,29 +1,28 @@
 class Grains
-  MAX = 64
-  MIN = 1
+  LOCATIONS = 1..64
   MULTIPLIER = 2
 
   class << self
     def square(number)
       unless valid_position(number)
-        raise ArgumentError, "Must be between #{MIN} and #{MAX}"
+        raise ArgumentError, "Must be between #{LOCATIONS.min} and #{LOCATIONS.max}"
       end
-
-      position_total(number)
+      index = number - 1
+      position_total(index)
     end
 
     def total
-      (MIN..MAX).inject(0) { |result, number| result + position_total(number) }
+      position_total(LOCATIONS.max) - 1
     end
 
     private
 
     def valid_position(number)
-      number.between?(MIN, MAX)
+      LOCATIONS.include?(number)
     end
 
-    def position_total(number)
-      MULTIPLIER.pow(number - 1)
+    def position_total(index)
+      MULTIPLIER.pow(index)
     end
   end
 end
