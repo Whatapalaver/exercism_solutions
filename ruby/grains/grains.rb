@@ -3,12 +3,11 @@ class Grains
   MULTIPLIER = 2
 
   class << self
-    def square(number)
-      unless valid_position(number)
-        raise ArgumentError, "Must be between #{LOCATIONS.min} and #{LOCATIONS.max}"
+    def square(location)
+      unless valid?(location)
+        raise ArgumentError, "BoardLocationError: Must be between #{LOCATIONS.min} and #{LOCATIONS.max}"
       end
-      index = number - 1
-      position_total(index)
+      position_total(location - 1)
     end
 
     def total
@@ -17,8 +16,8 @@ class Grains
 
     private
 
-    def valid_position(number)
-      LOCATIONS.include?(number)
+    def valid?(location)
+      LOCATIONS.include?(location)
     end
 
     def position_total(index)
