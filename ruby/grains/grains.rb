@@ -3,6 +3,10 @@ class Grains
   MULTIPLIER = 2
 
   def initialize(location)
+    unless valid?(location)
+      raise ArgumentError, "BoardLocationError: Must be between #{LOCATIONS.min} and #{LOCATIONS.max}"
+    end
+
     @location = location
   end
 
@@ -15,10 +19,6 @@ class Grains
   end
 
   def square
-    unless valid?(@location)
-      raise ArgumentError, "BoardLocationError: Must be between #{LOCATIONS.min} and #{LOCATIONS.max}"
-    end
-
     position_total(@location - 1)
   end
 
