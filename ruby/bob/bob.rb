@@ -23,7 +23,7 @@ class MessageAnalysis
   end
 
   def yells?
-    text.upcase == text && text.match(/[A-Z]/)
+    text.upcase == text && text.match?(/[A-Z]/)
   end
 
   def question?
