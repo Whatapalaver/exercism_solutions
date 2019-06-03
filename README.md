@@ -30,7 +30,7 @@ Core:
 - [x] Acronym
 - [x] High-Scores
 - [x] Matrix
-- [ ] Series
+- [x] Series
 
 Additional:
 - [x] Leap [Easy]
