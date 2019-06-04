@@ -31,6 +31,7 @@ Core:
 - [x] High-Scores
 - [x] Matrix
 - [x] Series
+- [ ] Word Count
 
 Additional:
 - [x] Leap [Easy]
@@ -42,6 +43,7 @@ Additional:
 - [x] bob [Easy]
 - [x] triangle [Easy]
 - [ ] strain [Easy]
+- [ ] anagram [Medium]
 
 JavaScript
 -------

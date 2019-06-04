@@ -1,15 +1,12 @@
 class Series
-  attr_reader :size
   def initialize(series)
-    @series = series.split('')
+    @series = series
   end
 
   def slices(size)
-    unless valid?(size)
-      raise ArgumentError, 'Slice size cannot be longer than the series'
-    end
+    raise ArgumentError, 'Slice size cannot be longer than the series' unless valid?(size)
 
-    @series.each_cons(size).map(&:join)
+    @series.split('').each_cons(size).map(&:join)
   end
 
   private
