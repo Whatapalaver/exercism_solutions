@@ -64,3 +64,11 @@ Core:
 
 Additional:
 
+Go
+-----
+Core:
+- [ ] Hello World
+- [ ] TwoFer
+- [ ] Hamming
+
+Additional:
