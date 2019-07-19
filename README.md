@@ -44,6 +44,8 @@ Additional:
 - [x] triangle [Easy]
 - [ ] strain [Easy]
 - [x] anagram [Medium]
+- [ ] nth-prime [Easy]
+- [ ] sum-of-multiples [Medium]
 
 JavaScript
 -------
