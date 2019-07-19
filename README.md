@@ -75,3 +75,12 @@ Core:
 - [ ] Hamming
 
 Additional:
+
+Bash
+-----
+Core:
+- [x] Hello World
+- [ ] TwoFer
+- [ ] Hamming
+
+Additional:
