@@ -16,11 +16,7 @@ class Phrase
   def words
     phrase
       .downcase
-      .scan(/[\w']+/)
-      .map { |word| unquote(word) }
+      .scan(/\b[\w']+\b/)
   end
 
-  def unquote(word)
-    word.gsub(/['"]$|^['"]/, '')
-  end
 end
