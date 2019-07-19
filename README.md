@@ -32,6 +32,7 @@ Core:
 - [x] Matrix
 - [x] Series
 - [x] Word Count
+- [ ] Register Color Duo
 
 Additional:
 - [x] Leap [Easy]
