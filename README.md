@@ -33,7 +33,7 @@ Core:
 - [x] Series
 - [x] Word Count
 - [x] Register Color Duo
-- [ ] Isogram
+- [x] Isogram
 
 Additional:
 - [x] Leap [Easy]
