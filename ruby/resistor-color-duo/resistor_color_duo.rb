@@ -5,8 +5,6 @@ class ResistorColorDuo
                  'grey' => '8', 'white' => '9' }.freeze
 
   def self.value(colors)
-    # commented this alternative solution as I don't fully understand to_proc yet
-    # colors.map(&RESISTANCE).join.to_i
-    colors.map( { |color| RESISTANCE[color] }).join.to_i
+    colors.map(&RESISTANCE).join.to_i
   end
 end
