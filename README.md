@@ -44,6 +44,7 @@ Additional:
 - [x] pangram [Easy]
 - [x] bob [Easy]
 - [x] triangle [Easy]
+- [x] resistor-color [Easy]
 - [ ] strain [Easy]
 - [x] anagram [Medium]
 - [ ] nth-prime [Easy]
