@@ -1,7 +1,7 @@
 class Isogram
 
   def self.isogram?(string)
-    return true unless split(string).detect{ |e| split(string).count(e) > 1 }
+    split(string) == split(string).uniq
   end
 
   def self.split(string)

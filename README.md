@@ -45,7 +45,7 @@ Additional:
 - [x] bob [Easy]
 - [x] triangle [Easy]
 - [x] resistor-color [Easy]
-- [ ] strain [Easy]
+- [x] strain [Easy][I think this was hard!]
 - [x] anagram [Medium]
 - [ ] nth-prime [Easy]
 - [ ] sum-of-multiples [Medium]
