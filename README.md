@@ -1,5 +1,6 @@
 Exercism.io
 ======
+
 [Exercism.io](https://exercism.io/) provides excellent challenge material with support for multiple languages.  
 I have started following these to supplement my experience at Makers bootcamp. I use it mostly for morning practice to try and develop some core language skills and confidence. 
 
@@ -14,16 +15,18 @@ To submit:
 `exercism submit ./path/to/file`
 
 Tracks
-======
+---
 
 Ruby
 ----
 
 Running tests:
+
 - cd to project folder
 - `ruby hamming_test.rb`
 
 Core:
+
 - [x] TwoFer
 - [x] Hamming
 - [x] Raindrops
@@ -36,6 +39,7 @@ Core:
 - [x] Isogram
 
 Additional:
+
 - [x] Leap [Easy]
 - [x] Grains [Medium]
 - [x] Gigasecond [Easy]
@@ -52,18 +56,41 @@ Additional:
 
 JavaScript
 -------
+
 Core:
+
 - [x] Leap
 - [x] RNA Transcription
 - [ ] Simple Cipher
 
 Additional:
+
 - [ ] Protein Translation
 - [ ] Minesweeper
 
+Python
+----
+
+Running tests:
+
+- `pip3 install pytest pytest-cache`
+- cd to project folder
+- `python bob_test.py`
+
+Core:
+
+- [ ] TwoFer
+- [ ] High Scores
+
+Additional:
+
+- [ ] Leap [Easy]
+
 Java
 -----
+
 Core:
+
 - [x] TwoFer
 - [ ] Hamming
 
@@ -71,6 +98,7 @@ Additional:
 
 Go
 -----
+
 Core:
 - [ ] Hello World
 - [ ] TwoFer
@@ -80,6 +108,7 @@ Additional:
 
 Bash
 -----
+
 Core:
 - [x] Hello World
 - [ ] TwoFer
