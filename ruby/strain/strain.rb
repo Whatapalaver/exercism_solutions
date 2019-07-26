@@ -4,13 +4,13 @@ class Array
   
   def keep(&block)
     result = []
-    each { |e| result << e if (block.call e) }
+    each { |e| result << e if (block[e]) }
     result
   end
 
   def discard(&block)
     result = []
-    each { |e| result << e unless (block.call e) }
+    each { |e| result << e unless (block[e]) }
     result
   end
 end
