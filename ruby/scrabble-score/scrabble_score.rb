@@ -1,5 +1,5 @@
 class Scrabble
-  TILE_SCORE = { 'A' => 1, 'E' => 1, 'I' => 1, 'O' => 1, 'U' => 1,
+  TILES = { 'A' => 1, 'E' => 1, 'I' => 1, 'O' => 1, 'U' => 1,
                  'L' => 1, 'N' => 1, 'R' => 1, 'S' => 1, 'T' => 1,
                  'D' => 2, 'G' => 2,
                  'B' => 3, 'C' => 3, 'M' => 3, 'P' => 3,
@@ -17,8 +17,10 @@ class Scrabble
   end
 
   def score
-    create_tiles.reduce(0) { |score, value| score + TILE_SCORE[value] }
+    create_tiles.sum { |value| TILES[value] }
   end
+
+  private
 
   def create_tiles
     @word.to_s.upcase.scan(/[A-Z]/)
