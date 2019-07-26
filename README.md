@@ -37,6 +37,7 @@ Core:
 - [x] Word Count
 - [x] Register Color Duo
 - [x] Isogram
+- [x] Scrabble Score
 
 Additional:
 
