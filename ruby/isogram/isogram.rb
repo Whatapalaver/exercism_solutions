@@ -1,14 +1,13 @@
 class Isogram
 
   def self.isogram?(string)
-    split(string) == split(string).uniq
+    stripped_chars = split(string)
+    stripped_chars.length == stripped_chars.uniq.length
   end
 
   def self.split(string)
     string
       .downcase
-      .gsub(/[-\s]+/, "")
-      .split('')
-      .sort
+      .scan(/[a-z]/)
   end
 end
