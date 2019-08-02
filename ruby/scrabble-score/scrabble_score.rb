@@ -22,7 +22,7 @@ class Scrabble
             'K' => 5,
             'J' => 8, 'X' => 8,
             'Q' => 10, 'Z' => 10 }.freeze
-  
+
   def initialize(word)
     @word_tiles = create_tiles(word)
   end
