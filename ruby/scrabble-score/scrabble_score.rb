@@ -1,5 +1,6 @@
 module TILEABLE
-  TILES = Hash.new(0).merge(
+  TILES = {
+    ENGLISH: Hash.new(0).merge(
       'A' => 1, 'I' => 1, 'Q' => 10,
       'B' => 3, 'J' => 8, 'R' => 1,
       'C' => 3, 'K' => 5, 'S' => 1,
@@ -11,20 +12,15 @@ module TILEABLE
       'Y' => 4,
       'Z' => 10
     )
+  }.freeze
 end
 
 class Scrabble
-  TILES = { 'A' => 1, 'E' => 1, 'I' => 1, 'O' => 1, 'U' => 1,
-            'L' => 1, 'N' => 1, 'R' => 1, 'S' => 1, 'T' => 1,
-            'D' => 2, 'G' => 2,
-            'B' => 3, 'C' => 3, 'M' => 3, 'P' => 3,
-            'F' => 4, 'H' => 4, 'V' => 4, 'W' => 4, 'Y' => 4,
-            'K' => 5,
-            'J' => 8, 'X' => 8,
-            'Q' => 10, 'Z' => 10 }.freeze
+  attr_reader :tiles
 
-  def initialize(word)
-    @word_tiles = create_tiles(word)
+  def initialize(word, tiles = TILEABLE::TILES[:ENGLISH])
+    @tiles = tiles
+    @word_tiles = validate_tiles(word)
   end
 
   def self.score(word)
@@ -32,12 +28,12 @@ class Scrabble
   end
 
   def score
-    @word_tiles.sum { |value| TILES[value] }
+    @word_tiles.sum { |letter| tiles[letter] }
   end
 
   private
 
-  def create_tiles(word)
-    word.to_s.upcase.scan(/[#{TILES.keys}]/)
+  def validate_tiles(word)
+    word.to_s.upcase.scan(/[#{tiles.keys}]/)
   end
 end
