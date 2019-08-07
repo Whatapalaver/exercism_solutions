@@ -16,11 +16,11 @@ module TILEABLE
 end
 
 class Scrabble
-  attr_reader :tiles
+  attr_reader :tiles, :word
 
   def initialize(word, tiles = TILEABLE::TILES[:ENGLISH])
     @tiles = tiles
-    @valid_letters = validate(word)
+    @word = word.to_s.upcase
   end
 
   def self.score(word)
@@ -28,12 +28,12 @@ class Scrabble
   end
 
   def score
-    @valid_letters.sum { |letter| tiles[letter] }
+    letters.sum { |letter| tiles[letter] }
   end
 
   private
 
-  def validate(word)
-    word.to_s.upcase.scan(/[#{tiles.keys.join}]/)
+  def letters
+    word.scan(/[#{tiles.keys.join}]/)
   end
 end
