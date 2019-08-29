@@ -5,7 +5,7 @@ require_relative 'luhn'
 class LuhnTest < Minitest::Test
   def test_single_digit_strings_can_not_be_valid
     # skip
-    refute Luhn.valid?("1")
+    refute Luhn.valid?(1)
   end
 
   def test_a_single_zero_is_invalid
