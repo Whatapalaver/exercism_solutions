@@ -1,8 +1,9 @@
 class Luhn
-  attr_reader :card_number
+  attr_reader :card_number, :card_numbers
 
   def initialize(card_number)
-    @card_number = card_number
+    @card_number = card_number.delete(' ')
+    @card_numbers = @card_number.chars.map(&:to_i)
   end
 
   def self.valid?(number)
@@ -14,30 +15,26 @@ class Luhn
   end
 
   def valid_input?
-    return false unless card_number.is_a?(String)
-
-    number_string = card_number.delete(' ')
-    number_string !~ /\D/ && number_string.length > 1
-  end
-
-  def valid_luhn_sum?
-    (luhn_algorithm.sum % 10).zero?
+    card_number !~ /\D/ && card_number.length > 1
   end
 
   private
 
   def luhn_algorithm
-    card_number
-      .delete(' ')
+    card_numbers
       .reverse
-      .chars
-      .map.with_index do | digit, index |
-        luhn_doubling(digit.to_i, index)
+      .each_slice(2)
+      .sum do |digit1, digit2 = 0|
+        digit1 + luhn_doubling(digit2)
       end
   end
 
-  def luhn_doubling(integer, index)
-    product = index.odd? ? integer * 2 : integer
+  def valid_luhn_sum?
+    (luhn_algorithm % 10).zero?
+  end
+
+  def luhn_doubling(integer)
+    product = integer * 2
     product > 9 ? product - 9 : product
   end
 end
