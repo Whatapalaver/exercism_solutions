@@ -9,7 +9,9 @@ class Luhn
   end
 
   def valid?
-    valid_input? && valid_luhn_sum?
+    return unless valid_input?
+
+    (luhn_algorithm % 10).zero?
   end
 
   private
@@ -28,10 +30,6 @@ class Luhn
       .sum do |digit1, digit2 = 0|
         digit1 + luhn_doubling(digit2)
       end
-  end
-
-  def valid_luhn_sum?
-    (luhn_algorithm % 10).zero?
   end
 
   def luhn_doubling(integer)
