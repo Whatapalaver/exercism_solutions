@@ -38,6 +38,8 @@ Core:
 - [x] Register Color Duo
 - [x] Isogram
 - [x] Scrabble Score
+- [x] Luhn
+- [ ] Clock
 
 Additional:
 
@@ -52,7 +54,7 @@ Additional:
 - [x] resistor-color [Easy]
 - [x] strain [Easy][I think this was hard!]
 - [x] anagram [Medium]
-- [ ] nth-prime [Easy]
+- [x] nth-prime [Easy]
 - [ ] sum-of-multiples [Medium]
 
 JavaScript
