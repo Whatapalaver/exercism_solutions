@@ -46,19 +46,19 @@ class SumOfMultiplesTest < Minitest::Test
   end
 
   def test_factors_not_relatively_prime
-    skip
+    # skip
     sum_of_multiples = SumOfMultiples.new(4, 6)
     assert_equal 30, sum_of_multiples.to(15)
   end
 
   def test_some_pairs_of_factors_relatively_prime_and_some_not
-    skip
+    # skip
     sum_of_multiples = SumOfMultiples.new(5, 6, 8)
     assert_equal 4_419, sum_of_multiples.to(150)
   end
 
   def test_one_factor_is_a_multiple_of_another
-    skip
+    # skip
     sum_of_multiples = SumOfMultiples.new(5, 25)
     assert_equal 275, sum_of_multiples.to(51)
   end
@@ -70,19 +70,19 @@ class SumOfMultiplesTest < Minitest::Test
   end
 
   def test_all_numbers_are_multiples_of_1
-    skip
+    # skip
     sum_of_multiples = SumOfMultiples.new(1)
     assert_equal 4_950, sum_of_multiples.to(100)
   end
 
   def test_no_factors_means_an_empty_sum
-    skip
+    # skip
     sum_of_multiples = SumOfMultiples.new()
     assert_equal 0, sum_of_multiples.to(10_000)
   end
 
   def test_the_only_multiple_of_0_is_0
-    skip
+    # skip
     sum_of_multiples = SumOfMultiples.new(0)
     assert_equal 0, sum_of_multiples.to(1)
   end

@@ -7,7 +7,7 @@ class SumOfMultiples
 
   def to(max_multiple)
     multiples = []
-    factors.each do |factor| 
+    factors.each do |factor|
       current_state = factor
       while current_state < max_multiple
         multiples << current_state
@@ -15,5 +15,9 @@ class SumOfMultiples
       end
     end
     multiples.uniq.sum
+  end
+
+  def remove_multiples
+    factors.delete_if { }
   end
 end
