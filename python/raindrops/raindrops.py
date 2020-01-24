@@ -1,15 +1,9 @@
-def convert(number):
-    output = pling(number) + plang(number) + plong(number)
+raindrop = {3: 'Pling', 5: 'Plang', 7: 'Plong'}
+
+
+def convert(number: int) -> str:
+    output = ''
+    for key in raindrop:
+        if number % key == 0:
+            output += raindrop[key]
     return str(number) if output == '' else output
-
-
-def pling(number):
-    return 'Pling' if number % 3 == 0 else ''
-
-
-def plang(number):
-    return 'Plang' if number % 5 == 0 else ''
-
-
-def plong(number):
-    return 'Plong' if number % 7 == 0 else ''

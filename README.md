@@ -77,7 +77,8 @@ Python
 Running tests:
 
 - `pip3 install pytest pytest-cache`
-- cd to project folder
+- `cd python` to enter project folder
+- activate venv with `source bin/activate`
 - `python bob_test.py`
 
 Core:
