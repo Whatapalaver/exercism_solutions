@@ -73,12 +73,15 @@ Additional:
 
 Python
 ----
+Use virtualenvwrapper to create a venv in .virtualenv folder
+
+- `mkvirtualenv -p python3 exercism`
+- activate the venv in your project with `workon exercism`
 
 Running tests:
 
 - `pip3 install pytest pytest-cache`
-- `cd python` to enter project folder
-- activate venv with `source bin/activate`
+- ensure the venv is activated (see above)
 - `python bob_test.py`
 
 Core:

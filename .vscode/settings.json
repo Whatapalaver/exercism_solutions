@@ -1,4 +1,4 @@
 {
   "git.ignoreLimitWarning": true,
-  "python.pythonPath": "python/bin/python"
+  "python.pythonPath": "/Users/whatapalaver/.virtualenvs/exercism/bin/python"
 }
