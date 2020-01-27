@@ -82,7 +82,7 @@ Running tests:
 
 - `pip3 install pytest pytest-cache`
 - ensure the venv is activated (see above)
-- `python bob_test.py`
+- `pytest bob_test.py`
 
 Core:
 

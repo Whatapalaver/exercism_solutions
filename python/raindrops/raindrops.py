@@ -16,5 +16,5 @@ def convert(number: int) -> str:
 #     return str(result or number)
 
 
-# print(convert(52))
-# print(convert(1))
+print(convert(52))
+print(convert(1))
