@@ -2,7 +2,7 @@ Exercism.io
 ======
 
 [Exercism.io](https://exercism.io/) provides excellent challenge material with support for multiple languages.  
-I have started following these to supplement my experience at Makers bootcamp. I use it mostly for morning practice to try and develop some core language skills and confidence. 
+I have started following these to supplement my experience at Makers bootcamp. I use it mostly for morning practice to try and develop some core language skills and confidence.
 
 Some set-up required:
 
@@ -39,7 +39,8 @@ Core:
 - [x] Isogram
 - [x] Scrabble Score
 - [x] Luhn
-- [ ] Clock
+- [x] Clock
+- [ ] Twelve Days
 
 Additional:
 
@@ -73,6 +74,7 @@ Additional:
 
 Python
 ----
+
 Use virtualenvwrapper to create a venv in .virtualenv folder
 
 - `mkvirtualenv -p python3 exercism`
@@ -86,8 +88,23 @@ Running tests:
 
 Core:
 
-- [ ] TwoFer
-- [ ] High Scores
+- [x] TwoFer
+- [x] Raindrops
+- [x] High Scores
+- [x] Matrix
+- [ ] Hamming
+- [ ] Isogram
+- [ ] Twelve Days
+- [ ] Word Count
+- [ ] Scrabble Score
+- [ ] Acronym
+- [ ] Kindergarten
+- [ ] Grade School
+- [ ] Luhn
+- [ ] Clock
+- [ ] Markdown
+- [ ] Tournament
+- [ ] Book Store
 
 Additional:
 
@@ -107,6 +124,7 @@ Go
 -----
 
 Core:
+
 - [ ] Hello World
 - [ ] TwoFer
 - [ ] Hamming
@@ -117,6 +135,7 @@ Bash
 -----
 
 Core:
+
 - [x] Hello World
 - [ ] TwoFer
 - [ ] Hamming
