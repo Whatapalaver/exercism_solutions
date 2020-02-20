@@ -9,9 +9,9 @@ To get started with TDD, see the `README.md` file in your
 class TwelveDays
 
   DAYS = %w[zero first second third fourth fifth sixth
-            seventh eight ninth tenth eleventh twelth].freeze
+            seventh eighth ninth tenth eleventh twelfth].freeze
 
-  GIFTS = ['and a Partridge in a Pear Tree',
+  GIFTS = ['and a Partridge in a Pear Tree.',
            'two Turtle Doves',
            'three French Hens',
            'four Calling Birds',
@@ -25,17 +25,16 @@ class TwelveDays
            'twelve Drummers Drumming'].freeze
 
   def self.song()
-    1.upto(12).map { |day| verse(day) }.join('\n')
+    1.upto(12).map { |day| verse(day) }.join("\n")
   end
 
   def self.verse(day)
     case day
     when 1
-      'On the first day of Christmas my true love gave to me, a Partridge in a Pear Tree.'
+      "On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.\n"
     when 2..12
-      "On the #{DAYS[day]} day of Christmas my true love gave to me, #{GIFTS[0, day].reverse.join(', ')}"
+      "On the #{DAYS[day]} day of Christmas my true love gave to me: #{GIFTS[0, day].reverse.join(', ')}\n"
     end
   end
 
-  
 end

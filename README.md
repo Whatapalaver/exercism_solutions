@@ -40,7 +40,8 @@ Core:
 - [x] Scrabble Score
 - [x] Luhn
 - [x] Clock
-- [ ] Twelve Days
+- [x] Twelve Days
+- [ ] Tournament
 
 Additional:
 
