@@ -8,8 +8,10 @@ To get started with TDD, see the `README.md` file in your
 
 class TwelveDays
 
-  DAYS = %w[zero first second third fourth fifth sixth
+  DAYS = %w[first second third fourth fifth sixth
             seventh eighth ninth tenth eleventh twelfth].freeze
+
+  FIRST_DAY = ['a Partridge in a Pear Tree.']       
 
   GIFTS = ['and a Partridge in a Pear Tree.',
            'two Turtle Doves',
@@ -29,12 +31,12 @@ class TwelveDays
   end
 
   def self.verse(day)
-    case day
-    when 1
-      "On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.\n"
-    when 2..12
-      "On the #{DAYS[day]} day of Christmas my true love gave to me: #{GIFTS[0, day].reverse.join(', ')}\n"
-    end
+    "On the #{DAYS[day - 1]} day of Christmas my true love gave to me: #{gifts(day)}\n"
+  end
+
+  def self.gifts(days)
+    gifts = days == 1 ? FIRST_DAY : GIFTS[0, days].reverse
+    gifts.join(', ')
   end
 
 end
