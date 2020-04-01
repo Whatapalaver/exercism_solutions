@@ -11,9 +11,7 @@ class TwelveDays
   DAYS = %w[first second third fourth fifth sixth
             seventh eighth ninth tenth eleventh twelfth].freeze
 
-  FIRST_DAY = ['a Partridge in a Pear Tree.']       
-
-  GIFTS = ['and a Partridge in a Pear Tree.',
+  GIFTS = ['a Partridge in a Pear Tree',
            'two Turtle Doves',
            'three French Hens',
            'four Calling Birds',
@@ -31,12 +29,16 @@ class TwelveDays
   end
 
   def self.verse(day)
-    "On the #{DAYS[day - 1]} day of Christmas my true love gave to me: #{gifts(day)}\n"
+    "On the #{DAYS[day - 1]} day of Christmas my true love gave to me: #{sentence(gifts(day))}\n"
   end
 
   def self.gifts(days)
-    gifts = days == 1 ? FIRST_DAY : GIFTS[0, days].reverse
-    gifts.join(', ')
+    GIFTS[0, days]
+  end
+
+  def self.sentence(gifts)
+    *other_gifts, last_gift = gifts.reverse
+    other_gifts.empty? ? "#{last_gift}." :  "#{other_gifts.join(", ")}, and #{last_gift}."
   end
 
 end
